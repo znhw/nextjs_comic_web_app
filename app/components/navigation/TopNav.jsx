@@ -1,4 +1,4 @@
-import { AccountIcon, SearchIcon, FolderIcon } from "../ui/Icon/Index";
+import { AccountIcon, SearchIcon, FolderIcon } from "../ui/Icon/icons";
 import { Icon } from "../ui/Icon/Icon";
 import styles from "./nav.module.css";  
 import { AppLink } from "../ui/AppLink/AppLink";

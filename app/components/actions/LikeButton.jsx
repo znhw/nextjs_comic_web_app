@@ -1,20 +1,17 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { Icon } from '../../components/ui/Icon/Icon';
-import { LikeIcon } from '../../components/ui/Icon/Index';
-import { Button } from '../../components/ui/Button/Button';
-import { AppLink } from '../../components/ui/AppLink/AppLink'; 
+import { Icon } from '../ui/Icon/Icon';
+import { LikeIcon } from '../ui/Icon/icons';
+import { Button } from '../ui/Button/Button';
+import { AppLink } from '../ui/AppLink/AppLink'; 
 
-export const LikeBtn = ({ onClick }) => {
+export const LikeButton = () => {
     const params = useParams();
-    const [liked, setLiked] = useState(false);
-
-    useEffect(() => {
-        const storedLike = localStorage.getItem(params.slug) 
-        if (storedLike === 'true')
-        setLiked(true);
-    }, [params]);
+    const [liked, setLiked] = useState(() => {
+        if (typeof window !== 'undefined') return false;
+        return localStorage.getItem(params.slug) === 'true';
+    });
 
     useEffect(() => {
         localStorage.setItem(params.slug, liked);

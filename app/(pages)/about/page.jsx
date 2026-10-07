@@ -1,5 +1,5 @@
 import Image from "next/image"; 
-import { SearchIcon, FolderIcon, AccountIcon, SortIcon } from "../../components/ui/Icon/Index";
+import { SearchIcon, FolderIcon, AccountIcon, SortIcon } from "../../components/ui/Icon/icons";
 import { Icon } from "../../components/ui/Icon/Icon";
 
 export default function About() {

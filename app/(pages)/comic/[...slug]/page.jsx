@@ -1,7 +1,7 @@
 'use client';
 import TopNav from '../../../components/navigation/TopNav';
-import { LikeBtn } from '../../../components/action_btn/LikeBtn';
-import { SaveBtn } from '../../../components/action_btn/SaveBtn';
+import { LikeButton } from '../../../components/actions/LikeButton';
+import { SaveButton } from '../../../components/actions/SaveButton';
 
 export default function TitlePage({}) {
   return (
@@ -9,8 +9,8 @@ export default function TitlePage({}) {
         <TopNav />
         <h1>Comic Page</h1>
         <p>This is a placeholder for the comic page content.</p>
-        <LikeBtn />
-        <SaveBtn /> 
+        <LikeButton />
+        <SaveButton /> 
       
     </div>
   );

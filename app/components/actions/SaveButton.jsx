@@ -1,24 +1,23 @@
 'use client';
 import { useState, useEffect } from 'react'; 
 import { useParams } from 'next/navigation';
-import { Icon } from '../../components/ui/Icon/Icon';
-import { SaveIcon } from '../../components/ui/Icon/Index';
-import { Button } from '../../components/ui/Button/Button';
-import { AppLink } from '../../components/ui/AppLink/AppLink'; 
+import { Icon } from '../ui/Icon/Icon';
+import { SaveIcon } from '../ui/Icon/icons';
+import { Button } from '../ui/Button/Button';
+import { AppLink } from '../ui/AppLink/AppLink'; 
 
-export const SaveBtn = ({ onClick }) => {
-    const [saved, setSaved] = useState(false);
+export const SaveButton = () => {
     const params = useParams();
 
-     useEffect(() => {
-            const storedLike = localStorage.getItem(params.slug) 
-            if (storedLike === 'true')
-            setSaved(true);
-        }, [params]);
-    
-        useEffect(() => {
-            localStorage.setItem(params.slug, saved);
-        }, [params.slug, saved]);
+    const [saved, setSaved] = useState(() => {
+        if (typeof window !== 'undefined') return false;
+
+        return localStorage.getItem(params.slug) === 'true';
+    });
+
+    useEffect(() => {
+        localStorage.setItem(params.slug, saved);
+    }, [params.slug, saved]);
     
 
     return (
