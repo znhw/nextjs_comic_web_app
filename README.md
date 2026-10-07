@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Comic Web Application
 
-## Getting Started
+A comic catalog and reading interface built with Next.js.
 
-First, run the development server:
+This project was created as a prototype for exploring the structure and UI of a comic-reading web application, including catalog browsing, dynamic comic routes, reusable UI components, and simple client-side user interactions.
+
+> **Project Status:** This project is no longer under active development. It is preserved as an incomplete prototype and portfolio project.
+
+## Features
+
+- Comic catalog with cover artwork
+- Dynamic routes for comic pages
+- Reusable UI components
+- Like and save interactions using local storage
+- Basic login state using React Context
+- Responsive navigation and interface components
+
+## Tech Stack
+
+- Next.js
+- React
+- JavaScript
+- CSS Modules
+- Local Storage
+
+## Project Structure
+
+```text
+app/
+├── (pages)/
+│   ├── about/
+│   ├── account/
+│   ├── comic/
+│   └── login/
+├── components/
+│   ├── actions/
+│   ├── auth/
+│   ├── layout/
+│   ├── navigation/
+│   └── ui/
+├── context/
+├── layout.tsx
+└── page.jsx
+```
+
+The application uses reusable components for common UI elements and separates authentication state, navigation, actions, and general UI components into their respective modules.
+
+## Running Locally
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project was intentionally left incomplete and does not represent a production-ready comic platform. Some functionality uses hard-coded data and browser storage rather than a backend or persistent database.
